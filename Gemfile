@@ -2,7 +2,7 @@ source 'https://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta3', '< 5.1'
+gem 'rails', '< 5.1'
 gem 'mysql2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.0'
@@ -10,7 +10,7 @@ gem 'mysql2'
 gem 'redis'
 gem 'sidekiq'
 gem 'mini_magick'
-gem 'active_model_serializers', '~> 0.10.0.rc1'
+gem 'active_model_serializers'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -24,16 +24,26 @@ gem 'devise', '~> 4.0.1'
 gem 'omniauth-qq-connect'
 gem 'omniauth-weibo-oauth2'
 
+# upload file
+gem 'carrierwave-qiniu', '~> 0.2.3'
+gem 'carrierwave', '~> 0.11.2'
+gem 'qiniu'
+
+# lock nokogiri
+gem 'nokogiri', '1.6.8'
+
+# api doc
+gem 'apipie-rails'
+
 group :development, :test do
   gem 'annotate'
   gem 'awesome_print'
-  gem 'apipie-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
   gem 'pry-nav'
-  gem 'rspec', '3.5.0.beta3'
-  gem 'rspec-rails', '3.5.0.beta3'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.1'
+  gem 'rspec', '~> 3.5'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
 end
